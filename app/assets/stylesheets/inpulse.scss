@@ -1,49 +1,40 @@
 body{
   background-color:navy;
   color: orange;
-  height: 900px;
-  text-align: center;
+  height: 100%;
   width: 1000px;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .header{
-  position: relative;
   &__logo{
-    position: absolute;
-    top: 10px;
-    left: 5px;
+    float: left;
   }
   img{
-    position: absolute;
+    margin: 10px;
     border-radius: 50%;
     height: 100px;
     width: 100px;
   }
   &__title{
-    position: absolute;
-    font-size: 3rem;
+    font-size: 4rem;
     font-family: impact;
-    top: 30px;
-    left: 120px;
+    margin: 20px;
+    float: left;
   }
   &__list{
-    position: absolute;
-    top: 40px;
-    right: 0;
+    margin: 20px;
+    float: right;
   }
     ul{
     list-style: none;
-    margin: 0 20px 0 0;
     padding: 0;
   }
-  ul li{
-    margin: 0;
-    padding-right: 30px;
-    font-size: 20px;
-    float: left;
-  }
+    ul li{
+      margin: 0;
+      padding-right: 30px;
+      font-size: 20px;
+      float: left;
+    }
 
 }
 .contents{
@@ -61,14 +52,14 @@ body{
    &__title{
     position: relative;
     top: 220px;
-    left: 25%;
+    left: 5%;
     font-size: 100px;
     font-family: impact;
     transform:rotate(-10deg);
    }
    &__sentence{
     position: relative;
-    top: 220px;
+    top: 200px;
     left: 25%;
     font-size: 30px;
     transform:rotate(-10deg);
