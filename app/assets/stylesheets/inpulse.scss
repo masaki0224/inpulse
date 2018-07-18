@@ -1,135 +1,66 @@
-body{
-  background-color:navy;
-  color: orange;
-  height: 100%;
-  width: 1000px;
-}
 
 .header{
   &__logo{
     float: left;
   }
   img{
-    margin: 10px;
-    border-radius: 50%;
-    height: 100px;
     width: 100px;
+    height: 100px;
   }
   &__title{
+    float: left;
     font-size: 4rem;
     font-family: impact;
-    margin: 20px;
-    float: left;
+    margin: 15px;
   }
   &__list{
-    margin: 20px;
-    float: right;
+    float:right;
   }
-    ul{
+  ul{
     list-style: none;
-    padding: 0;
   }
-    ul li{
-      margin: 0;
-      padding-right: 30px;
-      font-size: 20px;
-      float: left;
-    }
-
+  li{
+    float: left;
+    margin: 20px 0 0 0;
+    padding-right: 30px;
+    font-size: 20px;
+  }
 }
+.clearfix::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .contents{
-  position: relative;
-   &__image{
+  &__main{
     background-image: url("/assets/sign.jpg");
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     position: absolute;
     top: 150px;
     left: 0;
     width: 100%;
     height: 500px;
-   }
-   &__title{
+  }
+  &__title{
     position: relative;
-    top: 220px;
-    left: 5%;
+    top: 150px;
+    left: 55%;
     font-size: 100px;
     font-family: impact;
     transform:rotate(-10deg);
-   }
-   &__sentence{
-    position: relative;
-    top: 200px;
-    left: 25%;
-    font-size: 30px;
-    transform:rotate(-10deg);
-   }
-   &-left{
-    position: absolute;
-    top: 650px;
-    left: 30px;
-    text-align: center;
-    & p{
-      font-size: 25px;
-      font-weight: bold;
-    }
-   }
-   &__line{
-    border:solid 2px ;
-    padding: 15px;
-    letter-spacing: 1px;
-
-   }
-   &__arrow th{
-    border-bottom:solid 1px;
-    padding: 3px;
-   }
-}
-  .square_btn{
-     position: relative;
-     display: inline-block;
-     font-weight: bold;
-     padding: 0.25em 0;
-     text-decoration: none;
-     color: orange;
-  }
-
-  .square_btn:before{
-     position: absolute;
-     content: '';
-     width: 100%;
-     height: 4px;
-     top:100%;
-     left: 0;
-     border-radius: 3px;
-     background:orange;
-     transition: .2s;
-  }
-
-  .square_btn:hover:before {
-      top: -webkit-calc(100% - 3px);
-      top: calc(100% - 3px);
-  }
-  .box26 {
-      position: absolute;
-      margin: 2em 0;
-      padding: 0.5em 1em;
-      top: 650px;
-      left: 450px;
-  }
-  .box26 .box-title {
+    &-sub{
       position: relative;
-      top: -9px;
-      left: 30px;
-      padding: 0 9px;
-      line-height: 1;
-      font-size: 25px;
-      background: navy;
-      color: orange;
-      font-weight: bold;
+      top: 170px;
+      left: 55%;
+      font-size: 30px;
+      transform:rotate(-10deg);
+    }
   }
-  .box26 p {
-      margin: 12px;
-      padding: 0;
+  &__news{
+    float: left;
+    top: 900px;
+    left: 30px;
   }
-
+}
