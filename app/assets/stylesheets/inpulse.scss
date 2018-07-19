@@ -1,19 +1,22 @@
-
-.header{
-  &__logo{
+body{
+  color: orange;
+  background-color: navy;
+}
+  .header__logo{
     float: left;
   }
   img{
     width: 100px;
     height: 100px;
+    border-radius: 50px;
   }
-  &__title{
+  .header__title{
     float: left;
     font-size: 4rem;
     font-family: impact;
     margin: 15px;
   }
-  &__list{
+  .header__list{
     float:right;
   }
   ul{
@@ -24,15 +27,27 @@
     margin: 20px 0 0 0;
     padding-right: 30px;
     font-size: 20px;
+    color: orange;
   }
+  li a{
+    color: inherit;
+  }
+// .square_btn{
+//   text-decoration: none;
+// }
+.square_btn:hover{
+  font-size: 30px;
+  text-decoration: none;
 }
-.clearfix::after{
+
+.clearfix:after{
   content: "";
   display: block;
   clear: both;
 }
 
 .contents{
+  height: 600px;
   &__main{
     background-image: url("/assets/sign.jpg");
     background-repeat: no-repeat;
@@ -45,22 +60,47 @@
   }
   &__title{
     position: relative;
+    width:300px;
     top: 150px;
     left: 55%;
     font-size: 100px;
     font-family: impact;
     transform:rotate(-10deg);
-    &-sub{
-      position: relative;
-      top: 170px;
-      left: 55%;
-      font-size: 30px;
-      transform:rotate(-10deg);
-    }
   }
-  &__news{
-    float: left;
-    top: 900px;
-    left: 30px;
+  &__subtitle{
+    position: relative;
+    width: 400px;
+    top: 170px;
+    left: 55%;
+    font-size: 30px;
+    transform:rotate(-10deg);
   }
 }
+
+.news{
+  float: left;
+  width: 50%;
+  margin-left: 80px;
+  font-size: 20px;
+  &__title{
+    padding-left: 120px;
+    width: 80px;
+    text-decoration:underline;
+  }
+  td{
+    text-align: center;
+  }
+}
+
+.introduce{
+  float: left;
+  font-size: 20px;
+  text-align: center;
+  &__title{
+    padding-left: 50px;
+    width: 80px;
+    text-decoration:underline;
+  }
+}
+
+
