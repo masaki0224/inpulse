@@ -2,7 +2,7 @@ body{
   color: orange;
   background-color: navy;
   height: 100%;
-  text-align: center;
+  // text-align: center;
 
   .header__logo{
     float: left;
@@ -78,6 +78,9 @@ body{
   &__title{
     text-align: center;
     text-decoration:underline;
+  }
+  &__list{
+    margin:0 auto;
   }
   td{
     text-align: center;
