@@ -2,7 +2,6 @@ body{
   color: orange;
   background-color: navy;
   height: 100%;
-  // text-align: center;
 
   .header__logo{
     float: left;
@@ -20,6 +19,14 @@ body{
   }
   .header__list{
     float:right;
+  }
+  /* スマホ用CSS */
+  @media screen and ( max-width:767px ){
+    .header__list{
+      display: none;
+      background-image: url("/assets/menu-tab");
+      background-repeat: no-repeat;
+    }
   }
   ul{
     list-style: none;
@@ -46,9 +53,10 @@ body{
   clear: both;
 }
 
+
 .contents{
     height: 600px;
-    background-image: url("/assets/sign.jpg");
+    background:linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.6)),url("/assets/sign.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -68,6 +76,29 @@ body{
     transform:rotate(-10deg);
   }
 }
+  /* スマホ用CSS */
+    @media screen and (max-width: 767px){
+      .contents{
+        height: 300px;
+        border:solid 2px black;
+        background:linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.6)),url("/assets/sign.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        width: 100%;
+        &__title{
+          font-size: 70px;
+        }
+        &__subtitle{
+          font-size: 20px;
+        }
+        .title-wrapper{
+          top: 90px;
+          right: -65px;
+          transform:none;
+        }
+      }
+    }
 
 .news{
   float: left;
@@ -87,6 +118,13 @@ body{
     letter-spacing:1px;
   }
 }
+// スマホ用css
+@media screen and (max-width: 767px){
+  .news{
+    float: none;
+    width: 100%;
+  }
+}
 
 .introduce{
   padding: 30px;
@@ -99,5 +137,26 @@ body{
     text-decoration:underline;
   }
 }
+// スマホ用css
+@media screen and (max-width: 767px){
+  .introduce{
+    float: none;
+    width: 100%;
+  }
+}
+
+
+.hidden-on-sp{
+  display: none;
+  @media screen and (min-width: 767px){
+      display: block;
+    }
+  }
+.show-on-sp{
+  display: block;
+  @media screen and (min-width: 767px){
+      display: none;
+    }
+  }
 }
 
