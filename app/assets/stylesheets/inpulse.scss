@@ -5,12 +5,12 @@ body{
 
   .header__logo{
     float: left;
-  }
   img{
     width: 100px;
     height: 100px;
     border-radius: 50px;
   }
+}
   .header__title{
     float: left;
     font-size: 4rem;
@@ -19,23 +19,14 @@ body{
   }
   .header__list{
     float:right;
-  }
-  /* スマホ用CSS */
-  @media screen and ( max-width:767px ){
-    .header__list{
-      display: none;
-      background-image: url("/assets/menu-tab");
-      background-repeat: no-repeat;
-    }
-  }
-  ul{
     list-style: none;
   }
+
   li{
     float: left;
     margin: 20px 0 0 0;
     padding-right: 30px;
-    font-size: 20px;
+    font-size: 30px;
     color: orange;
   }
   li a{
@@ -43,7 +34,7 @@ body{
   }
 
 .square_btn:hover{
-  font-size: 30px;
+  font-size: 40px;
   text-decoration: none;
 }
 
@@ -53,6 +44,41 @@ body{
   clear: both;
 }
 
+.humberger-menu{
+  display: none;
+}
+  /* スマホ用CSS header*/
+  @media screen and ( max-width:767px ){
+    .header__logo img{
+      width: 70px;
+      height: 70px;
+    }
+    .header__title{
+      font-size: 3rem;
+      margin: 10px;
+    }
+    .header__list{
+      float: none;
+      display: none;
+      height: 100px;
+    }
+    .humberger-menu {
+      display: block;
+    img{
+      float: right;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+    }
+  }
+  .menu-btn:hover{
+    cursor: pointer;
+    opacity: 0.6;
+  }
+  }
+  /* header END*/
 
 .contents{
     height: 600px;
@@ -80,7 +106,6 @@ body{
     @media screen and (max-width: 767px){
       .contents{
         height: 300px;
-        border:solid 2px black;
         background:linear-gradient(rgba(#fff, 0.5), rgba(#fff, 0.6)),url("/assets/sign.jpg");
         background-repeat: no-repeat;
         background-size: cover;
@@ -88,14 +113,18 @@ body{
         width: 100%;
         &__title{
           font-size: 70px;
+          display: inline-block;
         }
         &__subtitle{
-          font-size: 20px;
+          display: inline-block;
+          font-size:20px;
+          white-space: nowrap;
         }
         .title-wrapper{
-          top: 90px;
-          right: -65px;
-          transform:none;
+          width: auto;
+          top: 50%;
+          right: 50%;
+          transform:translate(50%, -50%);
         }
       }
     }
@@ -123,6 +152,7 @@ body{
   .news{
     float: none;
     width: 100%;
+    padding: 15px;
   }
 }
 
@@ -142,21 +172,22 @@ body{
   .introduce{
     float: none;
     width: 100%;
+    padding: 15px;
   }
 }
 
 
-.hidden-on-sp{
-  display: none;
-  @media screen and (min-width: 767px){
-      display: block;
-    }
-  }
-.show-on-sp{
-  display: block;
-  @media screen and (min-width: 767px){
-      display: none;
-    }
-  }
+// .hidden-on-sp{
+//   display: none;
+//   @media screen and (max-width: 767px){
+//       display: block;
+//     }
+//   }
+// .show-on-sp{
+//   display: block;
+//   @media screen and (max-width: 767px){
+//       display: none;
+//     }
+//   }
 }
 
