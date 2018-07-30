@@ -14,3 +14,29 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+ // $(function(){
+ //  $('.navToggle').click(function(){
+ //    $(this).toggleClass('active');
+
+ //    if($(this).hasClass('active')){
+ //      $('.global-nav').addClass('active');
+ //    } else{
+ //      $('.global-nav').removeClass('active');
+ //    }
+ //  });
+ // });
+
+// $(function(){
+//   $(".humberger-menu-buttom img").click(function(){
+//     $(this).attr('src','assets/menu-close.png');
+//   });
+// });
+
+$(document).on('click', '.humberger-menu-buttom img', function (){
+  $('.global-navigation').addClass('active');
+});
+
+$(document).on('click', '.global-navigation-close-buttom', function(){
+  $('.global-navigation').removeClass('active');
+});
