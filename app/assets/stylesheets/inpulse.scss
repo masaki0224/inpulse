@@ -131,13 +131,12 @@ body{
     }
     .humberger-menu-buttom {
       display: block;
+      position: absolute;
+      top: 20px;
+      right: 10px;
       img{
-        float: right;
         width: 30px;
         height: 30px;
-        position: absolute;
-        top: 20px;
-        right: 10px;
       }
     }
     .global-navigation{
@@ -266,7 +265,7 @@ body{
     }
   }
 
-.introduce{
+.introduction{
   padding: 30px;
   box-sizing:border-box;
   font-size: 23px;
@@ -281,7 +280,7 @@ body{
 }
   // スマホ用css
   @media screen and (max-width: 767px){
-    .introduce{
+    .introduction{
       float: none;
       width: 100%;
       padding: 25px;
